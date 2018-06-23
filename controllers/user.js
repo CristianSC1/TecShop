@@ -188,7 +188,7 @@ module.exports = {
                 update: (req,res,next) => {
                     const id = req.params.id;
                     let updateParams = {
-                        ..req.body
+                        ...req.body
                     };
                     
                     User.update({_id: id},{$set: updateParams})
